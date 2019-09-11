@@ -91,6 +91,10 @@ StyleCopReport.xml
 # Chutzpah Test files
 _Chutzpah*
 
+# Visual C++ project files   - 11-09-2019
+*.vcxproj
+*.vcxproj.filters
+
 # Visual C++ cache files
 ipch/
 *.aps
