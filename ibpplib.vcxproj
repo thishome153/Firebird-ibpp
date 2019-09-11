@@ -73,12 +73,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <IncludePath>include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -144,34 +146,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ibpp\core\ibase.h" />
-    <ClInclude Include="ibpp\core\iberror.h" />
-    <ClInclude Include="ibpp\core\ibpp.h" />
-    <ClInclude Include="ibpp\core\stdafx.h" />
-    <ClInclude Include="ibpp\core\_ibpp.h" />
-    <ClInclude Include="include\ibase.h" />
+    <ClInclude Include="include\ibpp.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ibpp\core\array.cpp" />
-    <ClCompile Include="ibpp\core\blob.cpp" />
-    <ClCompile Include="ibpp\core\database.cpp" />
-    <ClCompile Include="ibpp\core\date.cpp" />
-    <ClCompile Include="ibpp\core\dbkey.cpp" />
-    <ClCompile Include="ibpp\core\events.cpp" />
-    <ClCompile Include="ibpp\core\exception.cpp" />
-    <ClCompile Include="ibpp\core\ibppClasses.cpp" />
-    <ClCompile Include="ibpp\core\row.cpp" />
-    <ClCompile Include="ibpp\core\service.cpp" />
-    <ClCompile Include="ibpp\core\statement.cpp" />
-    <ClCompile Include="ibpp\core\time.cpp" />
-    <ClCompile Include="ibpp\core\transaction.cpp" />
-    <ClCompile Include="ibpp\core\user.cpp" />
-    <ClCompile Include="ibpp\core\_dpb.cpp" />
-    <ClCompile Include="ibpp\core\_ibpp.cpp" />
-    <ClCompile Include="ibpp\core\_ibs.cpp" />
-    <ClCompile Include="ibpp\core\_rb.cpp" />
-    <ClCompile Include="ibpp\core\_spb.cpp" />
-    <ClCompile Include="ibpp\core\_tpb.cpp" />
+    <ClCompile Include="src\ibppClasses.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
